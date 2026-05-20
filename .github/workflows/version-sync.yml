@@ -1,0 +1,14 @@
+name: Version sync
+
+on:
+  pull_request:
+    paths:
+      - 'AL.APP/app.json'
+      - '.github/AL-Go-Settings.json'
+      - '.github/workflows/version-sync.yml'
+
+jobs:
+  check:
+    uses: inmindtechnologies/.github/.github/workflows/al-go-version-sync.yml@main
+    with:
+      app-json-path: AL.APP/app.json
